@@ -46,37 +46,6 @@ with open("laba-1.txt") as file: #открываем файл
                 evenNumber = number_to_words(int(j, 16)) #четные цифры выводим словами
                 print(evenNumber + ' - четная цифра')
     
-"""
-a = []
-with open("laba-1.txt") as file: #открываем файл
-    buffer = file.read(buffer_len) #читаем первый блок
-    if not buffer: #если файл пустой
-        print("Файл laba-1.txt пустой")
-        exit()
-    while buffer: #пока файл не пустой
-        while buffer >= '0' and buffer <= 'F': #обрабатываем текущий блок
-            if buffer >= '0' and buffer <= 'F':
-                work_buffer += buffer
-            buffer = file.read(buffer_len) #читаем очередной блок
-        if len(work_buffer) >= 2:
-            if work_buffer[1] == 'B': #ищем числа, в которых вторая слева цифра B
-                a.append(work_buffer)
-                a.sort() #сортируем список по неубыванию  
-        work_buffer = ""
-        buffer = file.read(buffer_len) #читаем очередной блок
-        
-    print(a)
-    
-if len(a) == 0:
-    print('В файле нет подходящих чисел')
-else:   
-    for i in a:
-        print(i)
-        for j in i:
-            if int(j,16) % 2 == 0:
-                evenNumber = number_to_words(int(j, 16)) #четные цифры выводим словами
-                print(evenNumber)
-"""
 
 
 
