@@ -23,7 +23,7 @@ with open("laba-1.txt") as file: #открываем файл
     if not buffer: #если файл пустой
         print("Файл пустой")
         exit()
-    while buffer: #пока файл не пустой
+    while buffer: #пока файл не п5устой
         while buffer >= '0' and (buffer <= 'F' or buffer <= 'f'): #обрабатываем текущий блок
             if buffer >= '0' and (buffer <= 'F'or buffer <= 'f'):
                 work_buffer += buffer                
@@ -34,13 +34,13 @@ with open("laba-1.txt") as file: #открываем файл
         work_buffer = ""
         buffer = file.read(buffer_len) #читаем очередной блок
 
-    for i in range(len(a)): #в этом цикле определяем неубывающую последовательность
-        if int(a[i-1],16) < int(a[i],16):
-            if a[i-1] not in res:
-                res.append(a[i-1])
+    for i in range(len(a)-1): #в этом цикле определяем неубывающую последовательность
+        if int(a[i],16) < int(a[i+1],16):
             if a[i] not in res:
                 res.append(a[i])
-        if int(a[i-1],16) == int(a[i],16):
+            if a[i+1] not in res:
+                res.append(a[i+1])
+        if int(a[i+1],16) == int(a[i],16):
             res.append(a[i])
         
     if len(res) == 0:
